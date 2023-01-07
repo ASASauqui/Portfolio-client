@@ -1,30 +1,42 @@
 /* General Block of Navbar */
 nav {
+    height: 70px;
+    width: 100%;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0f1620;
-    padding: 20px 60px;
+    background-color: #000000;
+    padding: 0px 60px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.192);
+    z-index: 9999;
 }
 
 /* Elements inside of the Navbar */
-#navbar-element-list {
+#navbar-left {
+    padding: 0px 0px;   
+}
+
+#navbar-right {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#navbar-element-list li {
+#navbar-right li {
+    width: 90px;
+    height: 66px;
     list-style: none;
-    padding: 0 20px;
+    margin: 0px 0px;
     position: relative;
 }
 
-#navbar-element-list li a {
-    display: block;
-    align-items: column;
-    justify-content: flex-start;
+#navbar-right li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 650;
@@ -32,29 +44,21 @@ nav {
     transition: 0.3s ease-in-out;
 }
 
-#navbar-element-list li a:hover,
-#navbar-element-list li a.active {
-    color: #b9ffff;
+#navbar-right li a:hover {
+    background-color: #10161d;
+    color: #47B5FF;
 }
 
-#navbar-element-list li a:hover::after,
-#navbar-element-list li a.active::after {
-    display: flex;
-    content: "";
-    width: 40%;
-    height: 3px;
-    background-color: #b9ffff;
-    position: absolute;
-    bottom: -3px;
-    left: 20px;
+#navbar-right li a.active {
+    color: #47B5FF;
 }
 
 /* Elements inside of the Navbar (Mobile) */
-#navbar-element-list-mobile {
+#navbar-right-mobile {
     display: none;
 }
 
-#navbar-element-list-mobile i {
+#navbar-right-mobile i {
     color: #ffffff;
 }
 
@@ -68,50 +72,51 @@ nav {
 /* Media Queries */
 @media screen and (max-width:769px) {
     /* Elements inside of the Navbar */
-    #navbar-element-list {
+    #navbar-right {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        position: fixed;
-        top: 74px;
+        position:fixed;
+        top: 70px;
         right: -500px;
         width: 300px;
         height: 100vh;
-        background-color: #20324b;
+        background-color: #1f1f1f;
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.336);
-        padding: 40px 0 0 10px;
+        padding: 40px 0 0 0;
         transition: 0.35s ease-in-out;
     }
 
-    #navbar-element-list.active {
+    #navbar-right.active {
         right: 0px;
     }
 
-    #navbar-element-list li {
-        margin-bottom: 30px;
+    #navbar-right li {
+        width: 100vh;
+        height: 60px;
     }
 
-    #navbar-element-list li a {
+    #navbar-right li a {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: flex-start;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: left;
+        padding: 30px 0 30px 40px;
     }
 
-    #navbar-element-list li a::after {
+    #navbar-right li a::after {
         transition: 0.3s ease-in-out;
     }
 
-    #navbar-element-list li a i {
-        margin-right: 10px;
-    }
-
     /* Elements inside of the Navbar (Mobile) */
-    #navbar-element-list-mobile {
+    #navbar-right-mobile {
         display: block;
     }
 
-    #navbar-element-list-mobile i {
+    #navbar-right-mobile i {
         font-size: 30px;
         animation: fade-in 0.5s;
     }

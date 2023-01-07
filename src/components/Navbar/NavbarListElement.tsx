@@ -20,8 +20,7 @@ class NavbarListElement extends React.Component<NavbarListElementProps, {}> {
                     <a 
                         className={this.props.active ? "active" : ""}
                         href="/">
-                        <i className={icons[this.props.name]}></i>
-                        <p>{this.props.name}</p>
+                        {this.props.name}
                     </a>
                 </li>
             </>

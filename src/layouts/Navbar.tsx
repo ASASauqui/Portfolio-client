@@ -22,14 +22,16 @@ class Navbar extends React.Component<{}, NavbarState> {
         return (
             <>
                 <nav>
-                    <a href="/">
+                    <a 
+                        id="navbar-left"
+                        href="/">
                         <Logo />
                     </a>
 
                     <div>
                         <ul 
-                            id="navbar-element-list" 
-                            className={this.state.clicked ? "#navbar-element-list active" : "#navbar-element-list"}>
+                            id="navbar-right" 
+                            className={this.state.clicked ? "#navbar-right active" : "#navbar-right"}>
                             <NavbarListElement name={"Home"} 
                                 active={this.state.currentPath === "/"} />
                             <NavbarListElement name={"Work"} 
@@ -42,14 +44,15 @@ class Navbar extends React.Component<{}, NavbarState> {
                     </div>
 
                     <div 
-                        id="navbar-element-list-mobile"
+                        id="navbar-right-mobile"
                         onClick={this.handleClick}>
                         <i 
-                            id={this.state.clicked ? "animation" : ""}
                             className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}>
                         </i>
                     </div>
                 </nav>
+
+                
             </>
         );
     }
