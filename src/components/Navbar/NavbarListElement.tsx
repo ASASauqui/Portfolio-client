@@ -3,6 +3,7 @@ import React from 'react';
 interface NavbarListElementProps {
     name: string
     active?: boolean
+    icon?: boolean
 }
 
 const icons: { [key: string]: string } = {
@@ -20,7 +21,10 @@ class NavbarListElement extends React.Component<NavbarListElementProps, {}> {
                     <a 
                         className={this.props.active ? "active" : ""}
                         href="/">
-                        {this.props.name}
+                        <i 
+                            className={this.props.icon ? icons[this.props.name] : ""}>
+                        </i>
+                        <p>{this.props.name}</p>
                     </a>
                 </li>
             </>

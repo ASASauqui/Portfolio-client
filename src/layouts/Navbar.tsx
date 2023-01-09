@@ -22,37 +22,68 @@ class Navbar extends React.Component<{}, NavbarState> {
         return (
             <>
                 <nav>
-                    <a 
-                        id="navbar-left"
-                        href="/">
-                        <Logo />
-                    </a>
+                    <div className="navbar">
+                        <div id="navbar-left">
+                            <a href="/">
+                                <Logo />
+                            </a>
+                        </div>
 
-                    <div>
                         <ul 
-                            id="navbar-right" 
-                            className={this.state.clicked ? "#navbar-right active" : "#navbar-right"}>
-                            <NavbarListElement name={"Home"} 
-                                active={this.state.currentPath === "/"} />
-                            <NavbarListElement name={"Work"} 
-                                active={this.state.currentPath === "/work"} />
-                            <NavbarListElement name={"Social"} 
-                                active={this.state.currentPath === "/social"} />
-                            <NavbarListElement name={"Contact"}
-                                active={this.state.currentPath === "/contact"} />
+                            id="navbar-right">
+                            <NavbarListElement 
+                                name={"Home"} 
+                                active={this.state.currentPath === "/"} icon={false} />
+                            <NavbarListElement 
+                                name={"Work"} 
+                                active={this.state.currentPath === "/work"}
+                                icon={false} />
+                            <NavbarListElement 
+                                name={"Social"} 
+                                active={this.state.currentPath === "/social"}
+                                icon={false} />
+                            <NavbarListElement 
+                                name={"Contact"}
+                                active={this.state.currentPath === "/contact"}
+                                icon={false} />
                         </ul>
+
+                        <div 
+                            id="navbar-left-mobile"
+                            onClick={this.handleClick}>
+                            <i 
+                                className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}>
+                            </i>
+                        </div>
+
+                        <div id="navbar-right-mobile">
+                            <a href="/">
+                                <Logo />
+                            </a>
+                        </div>
                     </div>
 
-                    <div 
-                        id="navbar-right-mobile"
-                        onClick={this.handleClick}>
-                        <i 
-                            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}>
-                        </i>
-                    </div>
-                </nav>
-
-                
+                    <ul 
+                        id="navbar-menu-mobile" 
+                        className={this.state.clicked ? "#navbar-menu-mobile active" : "#navbar-menu-mobile"}>
+                        <NavbarListElement 
+                            name={"Home"} 
+                            active={this.state.currentPath === "/"}
+                            icon={true} />
+                        <NavbarListElement 
+                            name={"Work"} 
+                            active={this.state.currentPath === "/work"}
+                            icon={true} />
+                        <NavbarListElement 
+                            name={"Social"} 
+                            active={this.state.currentPath === "/social"}
+                            icon={true} />
+                        <NavbarListElement 
+                            name={"Contact"}
+                            active={this.state.currentPath === "/contact"}
+                            icon={true} />
+                    </ul>
+                </nav>                
             </>
         );
     }

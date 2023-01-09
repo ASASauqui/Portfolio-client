@@ -8,6 +8,8 @@ function Home() {
     <>
         <Navbar />
         <HomePresentation />
+        <HomePresentation />
+        
     </>
   );
 }

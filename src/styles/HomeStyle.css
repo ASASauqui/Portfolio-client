@@ -1,5 +1,43 @@
-.home-presentation {    
-    background: linear-gradient(70deg, #182b44, #1d3a5f, #1d4a86, #1b5fb8);
-    min-height: 800px;
-    padding-top: 90px;
+body {
+    background-color: #000000;
+    min-height: 100vh;
+}
+
+.home-presentation {   
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: linear-gradient(90deg, #e6e6e6, #e4e4e4);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 0px;
+}
+
+.presentation-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    margin: 0 100px 0 100px;
+}
+
+.home-presentation span {
+    font-size: 4rem;
+}
+
+.home-presentation p {
+    text-align: justify;
+}
+
+.presentation-right {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    margin: 0 100px 0 100px;
 }
