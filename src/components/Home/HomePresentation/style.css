@@ -1,0 +1,101 @@
+.home-presentation {   
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: linear-gradient(90deg, #e6e6e6, #e4e4e4);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 0px;
+}
+
+.presentation-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+    margin: 0 100px 0 10%;
+}
+
+.presentation-left span {
+    text-align: left;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.presentation-left .changing-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.presentation-left .changing-text span {
+    color: #4a3142;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.presentation-left p {
+    width: 100%;
+    text-align: justify;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.presentation-left .greeting {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    color: #644b41;
+}
+
+.presentation-left .name span {
+    letter-spacing: 5px;
+}
+
+.presentation-left .name span:nth-child(1) {
+    color: #4a3931;
+}
+
+.presentation-left .name span:nth-child(2) {
+    color: #31424a;
+}
+
+.presentation-left .presentation-buttons  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    color: #ff00ae;
+}
+
+.presentation-left .presentation-buttons button {
+    width: 100px;
+    height: 40px;
+    margin: 0px 10px 0px 0px;
+    color: #000000;
+}
+
+.presentation-left .presentation-buttons button:nth-child(1) {
+    margin-right: 10px;
+}
+
+
+
+.presentation-right {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    margin: 0 100px 0 100px;
+}

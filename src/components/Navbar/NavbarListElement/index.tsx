@@ -1,17 +1,18 @@
 import React from 'react';
+import './style.css';
 
 interface NavbarListElementProps {
-    name: string
-    active?: boolean
-    icon?: boolean
+    name: string;
+    active?: boolean;
+    icon?: boolean;
 }
 
 const icons: { [key: string]: string } = {
-    "Home": "fas fa-home",
-    "Work": "fas fa-briefcase",
-    "Social": "fas fa-paper-plane",
-    "Contact": "fas fa-handshake",
-  };
+    Home: "fas fa-home",
+    Work: "fas fa-briefcase",
+    Social: "fas fa-paper-plane",
+    Contact: "fas fa-handshake",
+};
 
 class NavbarListElement extends React.Component<NavbarListElementProps, {}> {
     render() {
