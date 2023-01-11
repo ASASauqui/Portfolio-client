@@ -1,101 +1,210 @@
+/* ----------------General---------------- */
 .home-presentation {   
     position:relative;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    background: linear-gradient(90deg, #e6e6e6, #e4e4e4);
+    justify-content: center; 
+    background: #e4e4e4;
     width: 100%;
-    min-height: 100vh;
+    height: 800px;
     padding-top: 0px;
+    overflow: hidden;
 }
 
-.presentation-left {
+
+
+
+
+/* ----------------Sub---------------- */
+.presentation-col-1 {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    width: 800px;
-    height: 500px;
-    margin: 0 100px 0 10%;
+    justify-content: right;
+    width: 100%;
+    height: 400px;
+    margin: 0 2% 0 0;
 }
 
-.presentation-left span {
-    text-align: left;
-    font-size: 5rem;
-    font-weight: 600;
-}
-
-.presentation-left .changing-text {
-    position: relative;
+.presentation-col-2 {
+    position:relative;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: flex-start;
+    align-items: center;
+    justify-content: left;
     width: 100%;
-    margin-bottom: 20px;
+    height: 400px;
+    margin: 0 0 0 2%;
 }
 
-.presentation-left .changing-text span {
-    color: #4a3142;
-    text-align: left;
-    font-size: 3rem;
-}
-
-.presentation-left p {
-    width: 100%;
-    text-align: justify;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.presentation-left .greeting {
-    font-size: 1.6rem;
-    letter-spacing: 3px;
-    color: #644b41;
-}
-
-.presentation-left .name span {
-    letter-spacing: 5px;
-}
-
-.presentation-left .name span:nth-child(1) {
-    color: #4a3931;
-}
-
-.presentation-left .name span:nth-child(2) {
-    color: #31424a;
-}
-
-.presentation-left .presentation-buttons  {
-    position: relative;
+.presentation-col-2 .image-container {
+    background: linear-gradient(180deg, #1d142b, #4a3142);
+    position:relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;   
+    border-radius: 30% 30% 50% 50%;
+}
+
+.presentation-col-2 .image-container img {
+    padding-top: 130px;
     width: 100%;
-    height: 40px;
-    color: #ff00ae;
+    height: auto;
+    filter:contrast(105%);
+    transition: scale 0.5s;
 }
 
-.presentation-left .presentation-buttons button {
-    width: 100px;
-    height: 40px;
-    margin: 0px 10px 0px 0px;
-    color: #000000;
-}
-
-.presentation-left .presentation-buttons button:nth-child(1) {
-    margin-right: 10px;
+.presentation-col-2 .image-container img:hover {
+    scale: 0.9;
 }
 
 
 
-.presentation-right {
-    position:relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 500px;
-    height: 300px;
-    margin: 0 100px 0 100px;
+
+
+
+/* ----------------Media Queries---------------- */
+@media screen and (max-width:920px) {
+    .presentation-col-1 {
+        margin: 0 5% 0 0;
+    }
+
+    .presentation-col-1 .presentation-card {
+        width: 300px;
+    }
+
+    .presentation-col-1 .presentation-card .greeting span {
+        font-size: 1rem;
+    }
+
+    .presentation-col-1 .presentation-card .name span {
+        font-size: 3.5rem;
+    }
+
+    .presentation-col-1 .presentation-card .changing-text span {
+        font-size: 1.3rem;
+    }
+
+    .presentation-col-1 .presentation-card p {
+        font-size: 0.9rem;
+    }
+
+    .presentation-col-2 {
+        margin: 0 0 0 0;
+    }
+
+    .presentation-col-2 .image-container {
+        width: 320px;
+        height: 320px;
+    }
 }
+
+@media screen and (max-width:720px) {
+    .home-presentation {   
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center; 
+        padding-top: 100px;
+    }
+
+    .presentation-col-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        margin: 0 0 0 0;
+    }
+
+    .presentation-col-1 .presentation-card {
+        height: 100%;
+        width: 70%;
+    }
+
+    .presentation-col-1 .presentation-card .greeting span {
+        font-size: 1rem;
+    }
+
+    .presentation-col-1 .presentation-card .name span {
+        font-size: 3.5rem;
+    }
+
+    .presentation-col-1 .presentation-card .changing-text span {
+        font-size: 1.3rem;
+    }
+
+    .presentation-col-1 .presentation-card p {
+        font-size: 0.9rem;
+    }
+
+    .presentation-col-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        margin: 0 0 0 0;
+    }
+
+    .presentation-col-2 .image-container {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .home-presentation {   
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center; 
+        padding-top: 100px;
+    }
+
+    .presentation-col-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        margin: 0 0 0 0;
+    }
+
+    .presentation-col-1 .presentation-card {
+        height: 100%;
+        width: 70%;
+    }
+
+    .presentation-col-1 .presentation-card .greeting span {
+        font-size: 0.8rem;
+    }
+
+    .presentation-col-1 .presentation-card .name span {
+        font-size: 2.5rem;
+    }
+
+    .presentation-col-1 .presentation-card .changing-text span {
+        font-size: 1rem;
+    }
+
+    .presentation-col-1 .presentation-card p {
+        font-size: 0.9rem;
+    }
+
+    .presentation-col-2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        margin: 0 0 0 0;
+    }
+
+    .presentation-col-2 .image-container {
+        width: 220px;
+        height: 220px;
+    }
+}
+

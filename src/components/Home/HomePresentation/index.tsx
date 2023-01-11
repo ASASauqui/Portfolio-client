@@ -1,55 +1,26 @@
 import React from 'react';
-import useTyped from '../../../hooks/TypedHook/useTyped';
+import PresentationCard from '../../Cards/PresentationCard';
 import './style.css';
+import AlanImg from '../../../assets/home/alan_presentation.png';
 
-const texts: string[] =  [
-    "Frontend   ", 
-    "Backend   ", 
-    "MachineLearning   "
-];
 
-const HomePresentation: React.FC = () => {
-    const el = useTyped(texts, { 
-        loop: true,
-        backDelay: 1500,
-        shuffle: false,
-        showCursor: true });
-
+const Presentation: React.FC = () => {
     return (
         <>
             <div className="home-presentation">
-                <div className="presentation-left">
-                    <span className="greeting">Hello_</span>
-                    <div className="name">
-                        <span>I'm </span>
-                        <span>Alan</span>
-                    </div>
-
-                    <div className="changing-text"> 
-                        <span>
-                            &lt;
-                            <span ref={el}></span>
-                            /&gt;
-                        </span>
-                    </div>
-                    
-                    <p>
-                        Developer focused on cleanliness, efficiency and code maintenance. Experience in developing software projects, both on the Front-End and Back-End sides, and also in practical optimization and Machine Learning projects. Ready to meet me?
-                    </p>
-
-                    <div className="presentation-buttons">
-                        <button>Download CV</button>
-                        <button>Hire Me</button>
-                    </div>
+                <div className="presentation-col-1">
+                    <PresentationCard />
                 </div>
+                
 
-
-                <div className="presentation-right">
-                    
+                <div className="presentation-col-2">
+                    <div className="image-container">
+                        <img src={AlanImg} alt="Alan" />
+                    </div>
                 </div>
             </div>
         </>
     );
 };
 
-export default HomePresentation;
+export default Presentation;

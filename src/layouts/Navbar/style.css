@@ -5,10 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0000009f;
+    background-color: #e4e4e477;
     backdrop-filter: blur(5px);
     padding: 0px 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.192);
     z-index: 99999;
 }
 
@@ -18,12 +17,7 @@
     padding: 0px 0px;   
 }
 
-#navbar-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
+
 
 /* Elements inside of the Navbar (Mobile) */
 #navbar-left-mobile {
@@ -31,33 +25,13 @@
     display: none;
 }
 
-#navbar-left-mobile i {
-    font-size: 10px;
-    color: #ffffff;
-    width: 30px;
-    height: 30px;
-}
+
 
 #navbar-right-mobile {
     position: relative;
     display: none;
 }
 
-#navbar-menu-mobile {
-    visibility: hidden;
-    opacity: 0;
-    display: none;
-    background-color: #000000;
-    z-index: 99998;
-}
-
-#navbar-menu-mobile::before {
-    content: '';
-    display: flex;
-    width: 100%;
-    height: 1px;
-    background-color: #ffffff;
-}
 
 
 
@@ -76,35 +50,9 @@
         display: none;
     }
 
-    #navbar-menu-mobile {
-        visibility: hidden;
-        overflow-y: auto;
-        opacity: 0;
-        display: block;
-        position: absolute;
-        top: 0px;
-        top: -100%;
-        width: 100%;
-        height: 100vh;
-        transition: 0.35s ease-in-out;
-        padding-top: 60px;
-    }
-
-    #navbar-menu-mobile.active {
-        visibility: visible;
-        opacity: 1;
-        top: 0px;
-    }
-
     /* Elements inside of the Navbar (Mobile) */
     #navbar-left-mobile {
         display: block;
-    }
-
-    #navbar-left-mobile i {
-        cursor: pointer;
-        font-size: 30px;
-        animation: fade-in 0.5s;
     }
 
     #navbar-right-mobile {
@@ -120,14 +68,3 @@
 
 
 
-/* Animations */
-@keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-}

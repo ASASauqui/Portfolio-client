@@ -1,6 +1,8 @@
 import React from 'react';
+import NavbarList from '../../components/Navbar/NavbarList';
+import NavbarMenuMobile from '../../components/Navbar/NavbarMenuMobile';
+import NavbarMenuIcon from '../../components/Navbar/NavbarMenuIcon';
 import Logo from '../../components/Navbar/NavbarLogo';
-import NavbarListElement from '../../components/Navbar/NavbarListElement';
 import './style.css';
 
 interface NavbarState {
@@ -8,13 +10,18 @@ interface NavbarState {
     currentPath: string;
 }
 
-const NavbarListElements:{name: string, path: string}[] =
+const NavbarTextElements:{name: string, path: string, icon: string}[] =
 [
-    {name: "Home", path: "/"},
-    {name: "Work", path: "/work"},
-    {name: "Social", path: "/social"},
-    {name: "Contact", path: "/contact"}
+    {name: "Home", path: "/", icon: "fas fa-home"},
+    {name: "Work", path: "/work", icon: "fas fa-briefcase"},
+    {name: "Social", path: "/social", icon: "fas fa-paper-plane"},
+    {name: "Contact", path: "/contact", icon: "fas fa-handshake"}
 ];
+
+const Icons:{openIcon: string, closeIcon: string} = {
+    openIcon: "fas fa-bars", 
+    closeIcon: "fas fa-times"
+};
 
 class Navbar extends React.Component<{}, NavbarState> {
     state: NavbarState = {
@@ -32,52 +39,33 @@ class Navbar extends React.Component<{}, NavbarState> {
                 <nav>
                     <div className="navbar">
                         <div id="navbar-left">
-                            <a href="/">
-                                <Logo />
-                            </a>
+                            <Logo />
                         </div>
 
-                        <ul 
-                            id="navbar-right">
-                            {NavbarListElements.map(element => {
-                                return (
-                                    <NavbarListElement 
-                                        key={element.name}
-                                        name={element.name}
-                                        active={this.state.currentPath === element.path}
-                                        icon={false} />
-                                )
-                            })}
-                        </ul>
+                        <div id="navbar-right">
+                            <NavbarList listElements={NavbarTextElements} />
+                        </div>
+                        
 
                         <div 
                             id="navbar-left-mobile"
                             onClick={this.handleClick}>
-                            <i 
-                                className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}>
-                            </i>
+                            <NavbarMenuIcon 
+                                propIcons={Icons}
+                                propClicked={this.state.clicked}/>
                         </div>
 
                         <div id="navbar-right-mobile">
-                            <a href="/">
-                                <Logo />
-                            </a>
+                            <Logo />
                         </div>
                     </div>
 
-                    <ul 
-                        id="navbar-menu-mobile" 
-                        className={this.state.clicked ? "#navbar-menu-mobile active" : "#navbar-menu-mobile"}>
-                        {NavbarListElements.map(element => {
-                            return (
-                                <NavbarListElement 
-                                    key={element.name + '1'}
-                                    name={element.name}
-                                    active={this.state.currentPath === element.path}
-                                    icon={true} />
-                            )
-                        })}
-                    </ul>
+                    <div id="navbar-menu-mobile">
+                        <NavbarMenuMobile 
+                            propListElements={NavbarTextElements}
+                            propClicked={this.state.clicked} 
+                        />
+                    </div>
                 </nav>                
             </>
         );

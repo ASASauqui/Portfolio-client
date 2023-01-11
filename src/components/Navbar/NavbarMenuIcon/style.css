@@ -1,0 +1,51 @@
+/* ----------------General---------------- */
+.navbar-menu-icon i {
+    cursor: pointer;
+    font-size: 30px;
+    color: #302520;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+/* ----------------Media Queries---------------- */
+@media screen and (max-width:769px) {
+    .navbar-menu-icon {
+        animation: fade-in 0.5s;
+    }
+    
+    .navbar-menu-icon i {
+        font-size: 30px;
+        transition: transform 0.5s;
+    }
+
+    .navbar-menu-icon i.fas.fa-bars {
+        transform: rotate(180deg);
+    }
+
+    .navbar-menu-icon i.fas.fa-times {
+        transform: rotate(360deg);
+        
+    }
+}
+
+
+
+
+
+
+/* ----------------Animations---------------- */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}

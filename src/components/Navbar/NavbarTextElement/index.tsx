@@ -1,20 +1,12 @@
 import React from 'react';
-import './style.css';
 
 interface NavbarListElementProps {
     name: string;
     active?: boolean;
-    icon?: boolean;
+    icon?: string;
 }
 
-const icons: { [key: string]: string } = {
-    Home: "fas fa-home",
-    Work: "fas fa-briefcase",
-    Social: "fas fa-paper-plane",
-    Contact: "fas fa-handshake",
-};
-
-class NavbarListElement extends React.Component<NavbarListElementProps, {}> {
+class NavbarTextElement extends React.Component<NavbarListElementProps, {}> {
     render() {
         return (
             <>
@@ -23,7 +15,7 @@ class NavbarListElement extends React.Component<NavbarListElementProps, {}> {
                         className={this.props.active ? "active" : ""}
                         href="/">
                         <i 
-                            className={this.props.icon ? icons[this.props.name] : ""}>
+                            className={this.props.icon ? this.props.icon : ""}>
                         </i>
                         <p>{this.props.name}</p>
                     </a>
@@ -33,4 +25,4 @@ class NavbarListElement extends React.Component<NavbarListElementProps, {}> {
     }
 };
 
-export default NavbarListElement;
+export default NavbarTextElement;

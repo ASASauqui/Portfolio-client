@@ -1,0 +1,31 @@
+/* ----------------General---------------- */
+button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 140px;
+    height: 50px;
+    margin: 0px 10px 0px 0px;
+    padding: 15px 15px;
+    border-width: 0px;
+    border-radius: 15px;
+    color: #e4e4e4;
+    background: linear-gradient(180deg, #1d142b, #382b34);;
+}
+
+
+
+
+
+
+/* ----------------Sub---------------- */
+button span {
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+
+button:nth-child(1) {
+    margin-right: 10px;
+}

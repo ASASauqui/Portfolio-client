@@ -1,0 +1,84 @@
+/* ----------------General---------------- */
+.presentation-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+}
+
+
+
+
+
+
+/* ----------------Sub---------------- */
+.presentation-card .changing-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.presentation-card .name {
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: right;
+}
+
+.presentation-card .buttons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+}
+
+
+
+
+
+
+/* ----------------Text---------------- */
+.presentation-card .greeting span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #644b41;
+}
+
+.presentation-card .name span {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.presentation-card .name span:nth-child(1) {
+    color: #4a3931;
+    margin-right: 20px;
+}
+
+.presentation-card .name span:nth-child(2) {
+    color: #31424a;
+}
+
+.presentation-card .changing-text span {
+    color: #4a3142;
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.presentation-card p {
+    width: 100%;
+    text-align: justify;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
