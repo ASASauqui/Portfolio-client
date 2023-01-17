@@ -23,19 +23,19 @@ const NavbarMenuMobile: React.FC<PropsListElements> = ({propListElements, propCl
 
     return (
         <>
-            <ul 
-                id="menu-mobile" 
+            <ul
+                id="menu-mobile"
                 className={clicked ? "#menu-mobile active" : "#menu-mobile"}>
                 {propListElements.map(element => {
                     return (
-                        <NavbarTextElement 
+                        <NavbarTextElement
                             key={element.name + '1'}
                             name={element.name}
                             active={currentPath === element.path}
                             icon={element.icon} />
                     )
                 })}
-            </ul>       
+            </ul>
         </>
     );
 };

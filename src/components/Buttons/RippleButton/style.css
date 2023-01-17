@@ -1,6 +1,10 @@
 /* ----------------General---------------- */
 button {
     position: relative;
+}
+
+.btn {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,9 +14,15 @@ button {
     margin: 0px 10px 0px 0px;
     padding: 15px 15px;
     border-width: 0px;
-    border-radius: 15px;
+    border-radius: 5px;
     color: #e4e4e4;
-    background: linear-gradient(180deg, #1d142b, #382b34);;
+    background: linear-gradient(180deg, #2898c4, #11125a);
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 
@@ -21,11 +31,68 @@ button {
 
 
 /* ----------------Sub---------------- */
-button span {
+.btn span {
     font-weight: 200;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-button:nth-child(1) {
-    margin-right: 10px;
+.btn .text {
+    margin-right: 5px;
+}
+
+.btn .emoji {
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+
+.btn .ripple-effect {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple-animation 0.5s linear;
+}
+
+
+
+
+
+
+/* ----------------Colors---------------- */
+.btn.purple {
+    background: linear-gradient(180deg, #584b6e, #30212b);
+}
+
+.btn.purple:hover {
+    background: linear-gradient(180deg, #705c94, #30212b);
+}
+
+
+.btn.brown {
+    background: linear-gradient(180deg, #755c51, #271f1c);
+}
+
+.btn.brown:hover {
+    background: linear-gradient(180deg, #a07e6f, #271f1c);
+}
+
+
+
+
+
+
+
+
+/* ----------------Animation---------------- */
+@keyframes ripple-animation {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.4;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }

@@ -11,10 +11,10 @@ class NavbarTextElement extends React.Component<NavbarListElementProps, {}> {
         return (
             <>
                 <li>
-                    <a 
+                    <a
                         className={this.props.active ? "active" : ""}
                         href="/">
-                        <i 
+                        <i
                             className={this.props.icon ? this.props.icon : ""}>
                         </i>
                         <p>{this.props.name}</p>

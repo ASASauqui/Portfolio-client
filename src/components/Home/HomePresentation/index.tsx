@@ -11,7 +11,6 @@ const Presentation: React.FC = () => {
                 <div className="presentation-col-1">
                     <PresentationCard />
                 </div>
-                
 
                 <div className="presentation-col-2">
                     <div className="image-container">

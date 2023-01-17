@@ -24,18 +24,18 @@ class NavbarList extends React.Component<PropsListElements, NavbarState> {
     render() {
         return (
             <>
-                <ul 
+                <ul
                     id="navbar-list">
                     {this.props.listElements.map(element => {
                         return (
-                            <NavbarTextElement 
+                            <NavbarTextElement
                                 key={element.name}
                                 name={element.name}
                                 active={this.state.currentPath === element.path}
                             />
                         )
                     })}
-                </ul>          
+                </ul>
             </>
         );
     }

@@ -103,11 +103,11 @@
 }
 
 @media screen and (max-width:720px) {
-    .home-presentation {   
+    .home-presentation {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
         padding-top: 100px;
     }
 
@@ -156,11 +156,11 @@
 }
 
 @media screen and (max-width:380px) {
-    .home-presentation {   
+    .home-presentation {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
         padding-top: 100px;
     }
 

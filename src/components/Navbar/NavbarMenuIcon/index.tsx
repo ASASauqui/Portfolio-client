@@ -21,7 +21,7 @@ const NavbarMenuIcon: React.FC<PropsListElements> = ({propIcons, propClicked}) =
     return (
         <>
             <div className="navbar-menu-icon">
-                <i 
+                <i
                     className={clicked ? propIcons.closeIcon : propIcons.openIcon}>
                 </i>
             </div>

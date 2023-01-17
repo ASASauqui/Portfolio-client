@@ -19,7 +19,7 @@ const NavbarTextElements:{name: string, path: string, icon: string}[] =
 ];
 
 const Icons:{openIcon: string, closeIcon: string} = {
-    openIcon: "fas fa-bars", 
+    openIcon: "fas fa-bars",
     closeIcon: "fas fa-times"
 };
 
@@ -45,12 +45,12 @@ class Navbar extends React.Component<{}, NavbarState> {
                         <div id="navbar-right">
                             <NavbarList listElements={NavbarTextElements} />
                         </div>
-                        
 
-                        <div 
+
+                        <div
                             id="navbar-left-mobile"
                             onClick={this.handleClick}>
-                            <NavbarMenuIcon 
+                            <NavbarMenuIcon
                                 propIcons={Icons}
                                 propClicked={this.state.clicked}/>
                         </div>
@@ -61,12 +61,12 @@ class Navbar extends React.Component<{}, NavbarState> {
                     </div>
 
                     <div id="navbar-menu-mobile">
-                        <NavbarMenuMobile 
+                        <NavbarMenuMobile
                             propListElements={NavbarTextElements}
-                            propClicked={this.state.clicked} 
+                            propClicked={this.state.clicked}
                         />
                     </div>
-                </nav>                
+                </nav>
             </>
         );
     }
