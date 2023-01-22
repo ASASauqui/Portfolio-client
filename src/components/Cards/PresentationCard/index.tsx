@@ -39,8 +39,7 @@ const PresentationCard: React.FC = () => {
                 </p>
 
                 <div className="buttons">
-                    <RippleButton text="Download CV" color="purple" emoji="📄" />
-                    <RippleButton text="Hire Me" color="brown" emoji="🤝" />
+                    <RippleButton text="Hire Me" color="purple" emoji="🤝" />
                 </div>
             </div>
         </>

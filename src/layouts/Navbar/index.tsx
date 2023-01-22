@@ -1,14 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import NavbarList from '../../components/Navbar/NavbarList';
 import NavbarMenuMobile from '../../components/Navbar/NavbarMenuMobile';
 import NavbarMenuIcon from '../../components/Navbar/NavbarMenuIcon';
 import Logo from '../../components/Navbar/NavbarLogo';
 import './style.css';
-
-interface NavbarState {
-    clicked: boolean;
-    currentPath: string;
-}
 
 const NavbarTextElements:{name: string, path: string, icon: string}[] =
 [
@@ -23,53 +18,51 @@ const Icons:{openIcon: string, closeIcon: string} = {
     closeIcon: "fas fa-times"
 };
 
-class Navbar extends React.Component<{}, NavbarState> {
-    state: NavbarState = {
-        clicked: false,
-        currentPath: window.location.pathname
-    };
+const Navbar: React.FC = () => {
+    const [clicked, setClick] = useState(false);
 
-    handleClick = () => {
-        this.setState({clicked: !this.state.clicked});
+    const handleClick = () => {
+        setClick(!clicked);
     }
 
-    render() {
-        return (
-            <>
-                <nav>
-                    <div className="navbar">
-                        <div id="navbar-left">
-                            <Logo />
-                        </div>
-
-                        <div id="navbar-right">
-                            <NavbarList listElements={NavbarTextElements} />
-                        </div>
-
-
-                        <div
-                            id="navbar-left-mobile"
-                            onClick={this.handleClick}>
-                            <NavbarMenuIcon
-                                propIcons={Icons}
-                                propClicked={this.state.clicked}/>
-                        </div>
-
-                        <div id="navbar-right-mobile">
-                            <Logo />
-                        </div>
+    return (
+        <>
+            <nav>
+                <div
+                    className={clicked ? "navbar active" : "navbar"}>
+                    <div id="navbar-left">
+                        <Logo />
                     </div>
 
-                    <div id="navbar-menu-mobile">
-                        <NavbarMenuMobile
-                            propListElements={NavbarTextElements}
-                            propClicked={this.state.clicked}
-                        />
+                    <div id="navbar-right">
+                        <NavbarList listElements={NavbarTextElements} />
                     </div>
-                </nav>
-            </>
-        );
-    }
-};
+
+
+                    <div
+                        id="navbar-left-mobile"
+                        onClick={handleClick}>
+                        <NavbarMenuIcon
+                            propIcons={Icons}
+                            propClicked={clicked}/>
+                    </div>
+
+                    <div id="navbar-right-mobile">
+                        <Logo />
+                    </div>
+                </div>
+
+                <div
+                    id="navbar-menu-mobile">
+                    <NavbarMenuMobile
+                        propListElements={NavbarTextElements}
+                        propClicked={clicked}
+                    />
+                </div>
+            </nav>
+        </>
+    );
+}
 
 export default Navbar;
+

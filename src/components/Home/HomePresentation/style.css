@@ -1,14 +1,12 @@
 /* ----------------General---------------- */
-.home-presentation {   
+.home-presentation {
     position:relative;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     background: #e4e4e4;
     width: 100%;
-    height: 800px;
-    padding-top: 0px;
-    overflow: hidden;
+    height: 700px;
 }
 
 
@@ -23,7 +21,6 @@
     justify-content: right;
     width: 100%;
     height: 400px;
-    margin: 0 2% 0 0;
 }
 
 .presentation-col-2 {
@@ -34,18 +31,17 @@
     justify-content: left;
     width: 100%;
     height: 400px;
-    margin: 0 0 0 2%;
 }
 
 .presentation-col-2 .image-container {
     background: linear-gradient(180deg, #1d142b, #4a3142);
-    position:relative;
+    position:absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 400px;
     height: 400px;
-    overflow: hidden;   
+    overflow: hidden;
     border-radius: 30% 30% 50% 50%;
 }
 
@@ -67,7 +63,13 @@
 
 
 /* ----------------Media Queries---------------- */
-@media screen and (max-width:920px) {
+@media screen and (min-width:1000px) {
+    .presentation-col-1 {
+        margin: 0 5% 0 0;
+    }
+}
+
+@media screen and (min-width:719px) and (max-width:1000px) {
     .presentation-col-1 {
         margin: 0 5% 0 0;
     }
@@ -102,60 +104,7 @@
     }
 }
 
-@media screen and (max-width:720px) {
-    .home-presentation {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        padding-top: 100px;
-    }
-
-    .presentation-col-1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 350px;
-        margin: 0 0 0 0;
-    }
-
-    .presentation-col-1 .presentation-card {
-        height: 100%;
-        width: 70%;
-    }
-
-    .presentation-col-1 .presentation-card .greeting span {
-        font-size: 1rem;
-    }
-
-    .presentation-col-1 .presentation-card .name span {
-        font-size: 3.5rem;
-    }
-
-    .presentation-col-1 .presentation-card .changing-text span {
-        font-size: 1.3rem;
-    }
-
-    .presentation-col-1 .presentation-card p {
-        font-size: 0.9rem;
-    }
-
-    .presentation-col-2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 300px;
-        margin: 0 0 0 0;
-    }
-
-    .presentation-col-2 .image-container {
-        width: 270px;
-        height: 270px;
-    }
-}
-
-@media screen and (max-width:380px) {
+@media screen and (min-width:310px) and (max-width:719px) {
     .home-presentation {
         display: flex;
         flex-direction: column-reverse;
@@ -203,8 +152,61 @@
     }
 
     .presentation-col-2 .image-container {
-        width: 220px;
-        height: 220px;
+        width: 280px;
+        height: 280px;
     }
 }
 
+@media screen and (max-width:310px) {
+    .home-presentation {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        width: 300px;
+    }
+
+    .presentation-col-1 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+    }
+
+    .presentation-col-1 .presentation-card {
+        height: 100%;
+        width: 200px;
+    }
+
+    .presentation-col-1 .presentation-card .greeting span {
+        font-size: 0.8rem;
+    }
+
+    .presentation-col-1 .presentation-card .name span {
+        font-size: 2.5rem;
+    }
+
+    .presentation-col-1 .presentation-card .changing-text span {
+        font-size: 1rem;
+    }
+
+    .presentation-col-1 .presentation-card p {
+        font-size: 0.9rem;
+    }
+
+    .presentation-col-2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+    }
+
+    .presentation-col-2 .image-container {
+        width: 280px;
+        height: 280px;
+    }
+}

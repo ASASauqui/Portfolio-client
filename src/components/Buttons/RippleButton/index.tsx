@@ -1,8 +1,5 @@
 import React from 'react';
 import './style.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface ListElementProps {
     text: string;
@@ -41,9 +38,6 @@ const RippleButton: React.FC<ListElementProps> = ({text, color, emoji, time, onC
 
                 <span className="text">{text}</span>
 
-                {/* {iconName ?
-                    <FontAwesomeIcon icon={icon({name: 'coffee', style: 'solid'})} />
-                :   ""} */}
                 {emoji ?
                     <span className="emoji">{emoji}</span>
                 :   ""}

@@ -14,18 +14,14 @@
 /* Elements inside of the Navbar */
 #navbar-left {
     position: relative;
-    padding: 0px 0px;   
+    padding: 0px 0px;
 }
-
-
 
 /* Elements inside of the Navbar (Mobile) */
 #navbar-left-mobile {
     position: relative;
     display: none;
 }
-
-
 
 #navbar-right-mobile {
     position: relative;
@@ -40,10 +36,9 @@
 
 /* Media Queries */
 @media screen and (max-width:769px) {
-    
     /* Elements inside of the Navbar */
     #navbar-left {
-        display: none; 
+        display: none;
     }
 
     #navbar-right {
@@ -60,11 +55,3 @@
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
